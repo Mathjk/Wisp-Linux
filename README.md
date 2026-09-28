@@ -1,3 +1,15 @@
+> **Wisp for Linux** — a community Linux port of **[ppXD/Wisp](https://github.com/ppXD/Wisp)**
+> (local, real-time, cross-platform meeting transcription — on-device, private, model-swappable).
+>
+> All credit for the original application goes to the upstream author; this repo is MIT-licensed,
+> same as upstream. The port adds: PulseAudio/PipeWire system-audio capture (`wisp-pulseaudio`),
+> WebRTC AEC3 on Linux, a Vulkan-backed whisper.cpp GPU build, and `.deb` + AppImage packaging.
+>
+> Linux installers are on the **[Releases](../../releases)** page. The upstream README follows
+> below unchanged.
+
+---
+
 <div align="center">
 
 <picture>

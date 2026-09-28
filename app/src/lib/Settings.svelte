@@ -5,7 +5,7 @@
   import { cubicOut } from "svelte/easing";
   import { invoke } from "@tauri-apps/api/core";
   import { appDataDir, join } from "@tauri-apps/api/path";
-  import { openPath, revealItemInDir } from "@tauri-apps/plugin-opener";
+  import { openPath, openUrl, revealItemInDir } from "@tauri-apps/plugin-opener";
   import EndpointsManager from "$lib/EndpointsManager.svelte";
   import NotesSearch from "$lib/NotesSearch.svelte";
   import { i18n } from "$lib/i18n.svelte";
@@ -335,6 +335,13 @@
               {/each}
             {/if}
           {/if}
+
+          <p class="about-foot">
+            Wisp for Linux · community port of
+            <button class="about-link" onclick={() => openUrl("https://github.com/ppXD/Wisp")}
+              >ppXD/Wisp</button
+            >
+          </p>
         </div>
       </div>
     </div>
@@ -612,5 +619,23 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  .about-foot {
+    margin: 28px 0 4px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    font-size: 11.5px;
+    color: var(--muted);
+  }
+
+  .about-link {
+    border: 0;
+    background: none;
+    padding: 0;
+    font: inherit;
+    color: var(--accent);
+    text-decoration: underline;
+    cursor: pointer;
   }
 </style>
